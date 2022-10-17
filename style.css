@@ -1,0 +1,78 @@
+body {
+    background: url("https://www.kibrispdr.org/data/897/wallpaper-website-background-5.jpg") no-repeat;
+    background-size: cover;
+}
+
+.flexBox {
+    display: flex;
+}
+
+.main-nav {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.main-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.main-nav a {
+    display: block;
+    padding: 22px 20px 21px 20px;
+    text-decoration: none;
+    transition: background 3s;
+    border-bottom: 1px solid #1e282b;
+    line-height: 1;
+    font-weight: normal;
+    color: black;
+}
+
+.main-nav a:hover {
+    background: linear-gradient(rgba(49, 188, 186, 0.9) 28%, rgba(37, 176, 174, 0.9) 63%, rgba(25, 164, 162, 0.9) 100%);
+}
+
+.contentBox {
+    padding: 20px;
+}
+.content-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 27%;
+}
+
+.title {
+    text-align: center;
+}
+
+.links {
+    margin: 0 20px;
+}
+
+.foot-link {
+    white-space: nowrap;
+    text-indent: 30px;
+    overflow: hidden;
+    display: inline-block;
+    width: 27px;
+    height: 26px;
+
+}
+
+.foot-link:first-child {
+    background: url("https://cdn-icons-png.flaticon.com/512/60/60580.png") 0 0 no-repeat;
+    background-size: 70%;
+}
+
+.foot-link:nth-child(2) {
+    background: url("https://cdn-icons-png.flaticon.com/512/145/145808.png") 0 0 no-repeat;
+    background-size: 70%;
+}
+
+.foot-link:last-child {
+    background: url("https://cdn-icons-png.flaticon.com/512/3291/3291695.png") 0 0 no-repeat;
+    background-size: 70%;
+}

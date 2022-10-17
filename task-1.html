@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone/babel.min.js"></script>
+    <style>
+        body {
+            background: #1e282b;
+        }
+        .movie {
+            display: inline-block;
+            margin: 10px;
+            border-radius: 3px;
+            box-shadow: 0 2px 5px #586B71;
+            width: 200px;
+            padding: 20px;
+            background: #586B71;
+        }
+        .movie:hover {
+            background: #728990;
+            box-shadow: 0 5px 15px #728990;
+        }
+        .image {
+            max-width: 180px;
+            height: 250px;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<div id="cards"></div>
+
+<script type="text/babel">
+    const Movie = props => {
+      return (
+        <div className="movie">
+            <img className="image" src={props.image}/>
+            <h1>{props.title}</h1>
+            <p>{props.year}</p>
+        </div>
+      );
+    };
+
+    const app = (
+        <div>
+          <Movie image="https://upload.wikimedia.org/wikipedia/en/e/ee/In_Bruges_poster.png" title="In Bruges" year={2008}/>
+          <Movie image="https://m.media-amazon.com/images/I/71CvJ26Xc8L._AC_SY679_.jpg" title="Rick & Morty" year={2013}/>
+          <Movie image="https://cdn.shopify.com/s/files/1/0630/8509/products/pst3611ac_grande.jpeg?v=1484163872" title="Archer" year={2009}/>
+        </div>
+    )
+
+    const container = document.getElementById('cards');
+    ReactDOM.createRoot(container).render(app);
+</script>
+</body>
+</html>
